@@ -8,7 +8,9 @@ pipeline {
     PROJECT_ID    = 'durable-ring-471120-i8'
     REGISTRY_HOST = "${REGION}-docker.pkg.dev"
     BUCKET_NAME   = 'photo-drop-bucket'
-    DB_CONN       = 'postgresql://user:pass@cloudsql-instance:5432/photodb'
+    //DB_CONN       = 'postgresql://user:pass@cloudsql-instance:5432/photodb'
+    DB_CONN       = 'postgresql://user:pass@/photodb?host=/cloudsql/durable-ring-471120-i8:southamerica-west1:photodb-instance'
+
   }
 
   stages {
